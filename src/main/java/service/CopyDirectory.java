@@ -3,7 +3,7 @@ package main.java.service;
 import java.io.*;
 
 public class CopyDirectory {
-    private static void copyDir(String oldPath, String newPath) throws IOException {
+    public void copyDir(String oldPath, String newPath) throws IOException {
         File oldFile = new File(oldPath);
         File[] files = oldFile.listFiles();
         File newFile = new File(newPath);
@@ -19,7 +19,7 @@ public class CopyDirectory {
         }
     }
 
-    private static void copyFile(String oldPath, String newPath) throws IOException {
+    public void copyFile(String oldPath, String newPath) throws IOException {
         BufferedReader bufferedReader = null;
         PrintStream printStream = null;
         bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(oldPath)));
